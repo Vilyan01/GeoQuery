@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		888DE78A1C24A8890071BC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7891C24A8890071BC23 /* AppDelegate.swift */; };
-		888DE78C1C24A8890071BC23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE78B1C24A8890071BC23 /* ViewController.swift */; };
-		888DE78F1C24A8890071BC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888DE78D1C24A8890071BC23 /* Main.storyboard */; };
 		888DE7921C24A8890071BC23 /* GeoQuery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7901C24A8890071BC23 /* GeoQuery.xcdatamodeld */; };
 		888DE7941C24A8890071BC23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888DE7931C24A8890071BC23 /* Assets.xcassets */; };
 		888DE7971C24A8890071BC23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888DE7951C24A8890071BC23 /* LaunchScreen.storyboard */; };
 		888DE7A21C24A8890071BC23 /* GeoQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7A11C24A8890071BC23 /* GeoQueryTests.swift */; };
 		888DE7AD1C24A8890071BC23 /* GeoQueryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7AC1C24A8890071BC23 /* GeoQueryUITests.swift */; };
+		888DE7BF1C24AA860071BC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888DE7BE1C24AA860071BC23 /* Main.storyboard */; };
+		888DE7C21C24AAA90071BC23 /* Mountain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7C11C24AAA90071BC23 /* Mountain.swift */; };
+		888DE7C51C24AABA0071BC23 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 888DE7C31C24AABA0071BC23 /* logo.png */; };
+		888DE7C61C24AABA0071BC23 /* reticle.png in Resources */ = {isa = PBXBuildFile; fileRef = 888DE7C41C24AABA0071BC23 /* reticle.png */; };
+		888DE7C81C24AAC50071BC23 /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7C71C24AAC50071BC23 /* ApiUrls.swift */; };
+		888DE7CE1C24BF3C0071BC23 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7C91C24BF3C0071BC23 /* LoadingViewController.swift */; };
+		888DE7CF1C24BF3C0071BC23 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CA1C24BF3C0071BC23 /* CameraViewController.swift */; };
+		888DE7D01C24BF3C0071BC23 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CB1C24BF3C0071BC23 /* ResultsViewController.swift */; };
+		888DE7D11C24BF3C0071BC23 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CC1C24BF3C0071BC23 /* SearchViewController.swift */; };
+		888DE7D21C24BF3C0071BC23 /* MountainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CD1C24BF3C0071BC23 /* MountainInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +45,8 @@
 /* Begin PBXFileReference section */
 		888DE7861C24A8890071BC23 /* GeoQuery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoQuery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888DE7891C24A8890071BC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		888DE78B1C24A8890071BC23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		888DE78E1C24A8890071BC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		888DE7911C24A8890071BC23 /* GeoQuery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoQuery.xcdatamodel; sourceTree = "<group>"; };
-		888DE7931C24A8890071BC23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		888DE7931C24A8890071BC23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GeoQuery/Assets.xcassets; sourceTree = "<group>"; };
 		888DE7961C24A8890071BC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888DE7981C24A8890071BC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888DE79D1C24A8890071BC23 /* GeoQueryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoQueryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +55,16 @@
 		888DE7A81C24A8890071BC23 /* GeoQueryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoQueryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		888DE7AC1C24A8890071BC23 /* GeoQueryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoQueryUITests.swift; sourceTree = "<group>"; };
 		888DE7AE1C24A8890071BC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888DE7BE1C24AA860071BC23 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		888DE7C11C24AAA90071BC23 /* Mountain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mountain.swift; sourceTree = "<group>"; };
+		888DE7C31C24AABA0071BC23 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		888DE7C41C24AABA0071BC23 /* reticle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reticle.png; sourceTree = "<group>"; };
+		888DE7C71C24AAC50071BC23 /* ApiUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
+		888DE7C91C24BF3C0071BC23 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		888DE7CA1C24BF3C0071BC23 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		888DE7CB1C24BF3C0071BC23 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		888DE7CC1C24BF3C0071BC23 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		888DE7CD1C24BF3C0071BC23 /* MountainInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,11 @@
 		888DE77D1C24A8890071BC23 = {
 			isa = PBXGroup;
 			children = (
+				888DE7C01C24AA990071BC23 /* Models */,
+				888DE7BD1C24AA640071BC23 /* ViewControllers */,
+				888DE7BC1C24A9EA0071BC23 /* Assets */,
+				888DE7BB1C24A9DC0071BC23 /* Storyboards */,
+				888DE7BA1C24A9D20071BC23 /* CoreData */,
 				888DE7881C24A8890071BC23 /* GeoQuery */,
 				888DE7A01C24A8890071BC23 /* GeoQueryTests */,
 				888DE7AB1C24A8890071BC23 /* GeoQueryUITests */,
@@ -100,12 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				888DE7891C24A8890071BC23 /* AppDelegate.swift */,
-				888DE78B1C24A8890071BC23 /* ViewController.swift */,
-				888DE78D1C24A8890071BC23 /* Main.storyboard */,
-				888DE7931C24A8890071BC23 /* Assets.xcassets */,
-				888DE7951C24A8890071BC23 /* LaunchScreen.storyboard */,
 				888DE7981C24A8890071BC23 /* Info.plist */,
-				888DE7901C24A8890071BC23 /* GeoQuery.xcdatamodeld */,
 			);
 			path = GeoQuery;
 			sourceTree = "<group>";
@@ -126,6 +142,54 @@
 				888DE7AE1C24A8890071BC23 /* Info.plist */,
 			);
 			path = GeoQueryUITests;
+			sourceTree = "<group>";
+		};
+		888DE7BA1C24A9D20071BC23 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				888DE7901C24A8890071BC23 /* GeoQuery.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		888DE7BB1C24A9DC0071BC23 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				888DE7BE1C24AA860071BC23 /* Main.storyboard */,
+				888DE7951C24A8890071BC23 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		888DE7BC1C24A9EA0071BC23 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				888DE7C71C24AAC50071BC23 /* ApiUrls.swift */,
+				888DE7C31C24AABA0071BC23 /* logo.png */,
+				888DE7C41C24AABA0071BC23 /* reticle.png */,
+				888DE7931C24A8890071BC23 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		888DE7BD1C24AA640071BC23 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				888DE7C91C24BF3C0071BC23 /* LoadingViewController.swift */,
+				888DE7CA1C24BF3C0071BC23 /* CameraViewController.swift */,
+				888DE7CB1C24BF3C0071BC23 /* ResultsViewController.swift */,
+				888DE7CC1C24BF3C0071BC23 /* SearchViewController.swift */,
+				888DE7CD1C24BF3C0071BC23 /* MountainInfoViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		888DE7C01C24AA990071BC23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				888DE7C11C24AAA90071BC23 /* Mountain.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +260,7 @@
 				TargetAttributes = {
 					888DE7851C24A8890071BC23 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2EK7667N9X;
 					};
 					888DE79C1C24A8890071BC23 = {
 						CreatedOnToolsVersion = 7.2;
@@ -232,9 +297,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888DE7C51C24AABA0071BC23 /* logo.png in Resources */,
+				888DE7BF1C24AA860071BC23 /* Main.storyboard in Resources */,
+				888DE7C61C24AABA0071BC23 /* reticle.png in Resources */,
 				888DE7971C24A8890071BC23 /* LaunchScreen.storyboard in Resources */,
 				888DE7941C24A8890071BC23 /* Assets.xcassets in Resources */,
-				888DE78F1C24A8890071BC23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888DE78C1C24A8890071BC23 /* ViewController.swift in Sources */,
+				888DE7C81C24AAC50071BC23 /* ApiUrls.swift in Sources */,
 				888DE78A1C24A8890071BC23 /* AppDelegate.swift in Sources */,
+				888DE7D11C24BF3C0071BC23 /* SearchViewController.swift in Sources */,
+				888DE7CE1C24BF3C0071BC23 /* LoadingViewController.swift in Sources */,
+				888DE7D01C24BF3C0071BC23 /* ResultsViewController.swift in Sources */,
+				888DE7C21C24AAA90071BC23 /* Mountain.swift in Sources */,
+				888DE7D21C24BF3C0071BC23 /* MountainInfoViewController.swift in Sources */,
 				888DE7921C24A8890071BC23 /* GeoQuery.xcdatamodeld in Sources */,
+				888DE7CF1C24BF3C0071BC23 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,20 +370,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		888DE78D1C24A8890071BC23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				888DE78E1C24A8890071BC23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		888DE7951C24A8890071BC23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				888DE7961C24A8890071BC23 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = GeoQuery;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GeoQuery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaperss.GeoQuery;
@@ -412,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GeoQuery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaperss.GeoQuery;
@@ -486,6 +554,7 @@
 				888DE7B31C24A8890071BC23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		888DE7B41C24A8890071BC23 /* Build configuration list for PBXNativeTarget "GeoQueryTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +563,7 @@
 				888DE7B61C24A8890071BC23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		888DE7B71C24A8890071BC23 /* Build configuration list for PBXNativeTarget "GeoQueryUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +572,7 @@
 				888DE7B91C24A8890071BC23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -512,7 +583,8 @@
 				888DE7911C24A8890071BC23 /* GeoQuery.xcdatamodel */,
 			);
 			currentVersion = 888DE7911C24A8890071BC23 /* GeoQuery.xcdatamodel */;
-			path = GeoQuery.xcdatamodeld;
+			name = GeoQuery.xcdatamodeld;
+			path = GeoQuery/GeoQuery.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
