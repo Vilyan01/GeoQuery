@@ -63,6 +63,7 @@ class SearchViewController: UIViewController {
                     mtn.latitude = mountainLat
                     mtn.longitude = mountainLong
                     mtn.distance = Int(((location?.distanceFromLocation(mtnCoord))! / 1609.34))
+                    mtn.direction = Int(direction)
                     
                     // calculate probability.  Less degrees delta the better
                     mtn.probability = (1.0 - delta / deltaHeading)
@@ -105,6 +106,7 @@ class SearchViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! ResultsViewController
         destination.mountains = mountainArray
+        destination.heading = Int(self.heading!)
     }
     
 

@@ -10,11 +10,15 @@ import UIKit
 
 class MountainInfoViewController: UIViewController {
     
+    @IBOutlet weak var userHeadingLabel: UILabel!
+    @IBOutlet weak var mountainDirectionLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var elevationLabel: UILabel!
     @IBOutlet weak var name: UILabel!
     var mountain:Mountain?
+    var userHeading:Int?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,8 @@ class MountainInfoViewController: UIViewController {
             self.longitudeLabel.text = "\(mountain!.longitude)"
             self.elevationLabel.text = "\(mountain!.elevation) Feet"
             self.name.text = mountain!.name
+            self.userHeadingLabel.text = "\(self.userHeading!)°"
+            self.mountainDirectionLabel.text = "\(mountain!.direction)"
         }
     }
 

@@ -15,6 +15,7 @@ class Mountain: NSObject {
     var longitude:Float
     var distance:Int
     var probability:Double
+    var direction:Int
     
     override init() {
         self.name = ""
@@ -23,6 +24,7 @@ class Mountain: NSObject {
         self.longitude = 0.0
         self.distance = 0
         self.probability = 0.0
+        self.direction = 0
         super.init()
     }
 }

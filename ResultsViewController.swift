@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ResultsViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ResultsViewController: UIViewController {
     
     var mountains:NSArray?
     var selectedMountain:Mountain?
+    var heading:Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class ResultsViewController: UIViewController {
         if segue.identifier == "GetDetails" {
             let destination = segue.destinationViewController as! MountainInfoViewController
             destination.mountain = self.selectedMountain
+            destination.userHeading = heading
         }
     }
 }

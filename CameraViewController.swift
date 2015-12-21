@@ -16,6 +16,7 @@ class CameraViewController: UIViewController {
     // Outlets
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var discoverButton: UIButton!
+    @IBOutlet weak var headingLabel: UILabel!
     
     // AVFoundation
     var session:AVCaptureSession?
@@ -135,6 +136,7 @@ extension CameraViewController {
 extension CameraViewController : CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         self.userHeading = newHeading.trueHeading
+        headingLabel.text = "Heading (True): \(Int(self.userHeading!))°"
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
