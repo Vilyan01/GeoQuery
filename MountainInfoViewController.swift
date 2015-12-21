@@ -29,7 +29,7 @@ class MountainInfoViewController: UIViewController {
             self.elevationLabel.text = "\(mountain!.elevation) Feet"
             self.name.text = mountain!.name
             self.userHeadingLabel.text = "\(self.userHeading!)°"
-            self.mountainDirectionLabel.text = "\(mountain!.direction)"
+            self.mountainDirectionLabel.text = "\(mountain!.direction)°"
         }
     }
 
