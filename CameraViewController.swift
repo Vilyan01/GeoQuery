@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import CoreLocation
 import MapKit
+import CoreMotion
 
 class CameraViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var discoverButton: UIButton!
     @IBOutlet weak var headingLabel: UILabel!
+    @IBOutlet weak var levelView: UISlider!
     
     // AVFoundation
     var session:AVCaptureSession?
@@ -30,13 +32,15 @@ class CameraViewController: UIViewController {
     var userLocation:CLLocation?
     var userHeading:CLLocationDirection?
     
+    // Motion
+    var motionLastYaw = 0.0
+    var centerOfScreen:CGFloat?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Interface
         discoverButton.layer.cornerRadius = 5
-        discoverButton.layer.borderWidth = 1
-        discoverButton.layer.borderColor = UIColor.whiteColor().CGColor
         
         // AVFoundation
         session = AVCaptureSession()
@@ -60,6 +64,11 @@ class CameraViewController: UIViewController {
         
         // Notification Center
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "dismissViewControllers", name: "Camera", object: nil)
+        
+        // Motion Kit
+        let motionKit = MotionKit()
+        motionKit.delegate = self
+        motionKit.getAttitudeFromDeviceMotion(0.02, values: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -89,6 +98,8 @@ class CameraViewController: UIViewController {
             
             session?.addOutput(stillImageOutput)
             session!.startRunning()
+            
+            centerOfScreen = self.view.frame.width / CGFloat(2.0)
         }
         else {
             let alertController = UIAlertController(title: "Error", message: "It doesn't appear as if your device has a camera.  To use this applications functionality point your device in the direction of the mountain and tap discover", preferredStyle: UIAlertControllerStyle.Alert)
@@ -156,6 +167,35 @@ extension CameraViewController : CLLocationManagerDelegate {
             self.discoverButton.enabled = true
             manager.startUpdatingLocation()
             manager.startUpdatingHeading()
+        }
+    }
+}
+
+// #MARK - MotionKitDelegate
+extension CameraViewController : MotionKitDelegate {
+    func getAttitudeFromDeviceMotion(attitude: CMAttitude) {
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            let quat = attitude.quaternion
+            let yaw = asin(2*(quat.x * quat.z - quat.w * quat.y))
+            
+            if (self.motionLastYaw == 0) {
+                self.motionLastYaw = yaw;
+            }
+            
+            // kalman filtering
+            let q = 0.1;   // process noise
+            let r = 0.1;   // sensor noise
+            var p = 0.1;   // estimated error
+            var k = 0.5;   // kalman filter gain
+            
+            var x = self.motionLastYaw;
+            p = p + q;
+            k = p / (p + r);
+            x = x + k*(yaw - x);
+            p = (1 - k)*p;
+            self.motionLastYaw = x;
+            print(0.5 + (Float(x) * 0.5))
+            self.levelView.value = 0.5 + (Float(x) * 0.5)
         }
     }
 }

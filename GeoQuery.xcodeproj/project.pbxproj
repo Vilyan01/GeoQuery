@@ -23,6 +23,7 @@
 		888DE7D01C24BF3C0071BC23 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CB1C24BF3C0071BC23 /* ResultsViewController.swift */; };
 		888DE7D11C24BF3C0071BC23 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CC1C24BF3C0071BC23 /* SearchViewController.swift */; };
 		888DE7D21C24BF3C0071BC23 /* MountainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888DE7CD1C24BF3C0071BC23 /* MountainInfoViewController.swift */; };
+		88AD9EA31C2A035C00E0D1F8 /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD9EA21C2A035C00E0D1F8 /* MotionKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		888DE7CB1C24BF3C0071BC23 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		888DE7CC1C24BF3C0071BC23 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		888DE7CD1C24BF3C0071BC23 /* MountainInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainInfoViewController.swift; sourceTree = "<group>"; };
+		88AD9EA21C2A035C00E0D1F8 /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		888DE77D1C24A8890071BC23 = {
 			isa = PBXGroup;
 			children = (
+				88AD9EA11C2A01CE00E0D1F8 /* Motion */,
 				888DE7C01C24AA990071BC23 /* Models */,
 				888DE7BD1C24AA640071BC23 /* ViewControllers */,
 				888DE7BC1C24A9EA0071BC23 /* Assets */,
@@ -190,6 +193,14 @@
 				888DE7C11C24AAA90071BC23 /* Mountain.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		88AD9EA11C2A01CE00E0D1F8 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				88AD9EA21C2A035C00E0D1F8 /* MotionKit.swift */,
+			);
+			name = Motion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 				888DE7CE1C24BF3C0071BC23 /* LoadingViewController.swift in Sources */,
 				888DE7D01C24BF3C0071BC23 /* ResultsViewController.swift in Sources */,
 				888DE7C21C24AAA90071BC23 /* Mountain.swift in Sources */,
+				88AD9EA31C2A035C00E0D1F8 /* MotionKit.swift in Sources */,
 				888DE7D21C24BF3C0071BC23 /* MountainInfoViewController.swift in Sources */,
 				888DE7921C24A8890071BC23 /* GeoQuery.xcdatamodeld in Sources */,
 				888DE7CF1C24BF3C0071BC23 /* CameraViewController.swift in Sources */,
