@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     // user position and heading
     var location:CLLocation?
     var heading:CLLocationDirection?
+    var rotation:Double?
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     // array to send to the table view
@@ -34,6 +35,9 @@ class SearchViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         mountainArray = NSMutableArray()
+        
+        // normalize heading
+        normalizeHeading()
         // grab objects from within reasonable area of user
         let upperLat = (location?.coordinate.latitude)! + deltaLat
         let lowerLat = (location?.coordinate.latitude)! - deltaLat
@@ -134,6 +138,12 @@ extension SearchViewController {
             return 360 + radiansToDegrees(radiansBearing)
         }
     }
+    
+    private func normalizeHeading() {
+        let offset = radiansToDegrees(self.rotation!)
+        self.heading = self.heading! + offset
+    }
+    
     private func degreesToRadians(degrees: Double) -> Double { return degrees * M_PI / 180.0 }
     private func radiansToDegrees(radians: Double) -> Double { return radians * 180.0 / M_PI }
 }

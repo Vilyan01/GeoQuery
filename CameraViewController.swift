@@ -17,8 +17,6 @@ class CameraViewController: UIViewController {
     // Outlets
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var discoverButton: UIButton!
-    @IBOutlet weak var headingLabel: UILabel!
-    @IBOutlet weak var levelView: UISlider!
     
     // AVFoundation
     var session:AVCaptureSession?
@@ -130,6 +128,7 @@ class CameraViewController: UIViewController {
             destination.location = self.userLocation
         }
         destination.heading = self.userHeading
+        destination.rotation = self.motionLastYaw
     }
 
 
@@ -147,7 +146,6 @@ extension CameraViewController {
 extension CameraViewController : CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         self.userHeading = newHeading.trueHeading
-        headingLabel.text = "Heading (True): \(Int(self.userHeading!))°"
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -194,8 +192,6 @@ extension CameraViewController : MotionKitDelegate {
             x = x + k*(yaw - x);
             p = (1 - k)*p;
             self.motionLastYaw = x;
-            print(0.5 + (Float(x) * 0.5))
-            self.levelView.value = 0.5 + (Float(x) * 0.5)
         }
     }
 }
